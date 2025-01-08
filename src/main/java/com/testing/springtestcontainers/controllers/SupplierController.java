@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping("/suppliers")
 @RequiredArgsConstructor
 public class SupplierController {
-    private SupplierService supplierService;
+    private final SupplierService supplierService;
 
     @PostMapping
     public ResponseEntity<Supplier> createSupplier(@RequestBody Supplier supplier) {

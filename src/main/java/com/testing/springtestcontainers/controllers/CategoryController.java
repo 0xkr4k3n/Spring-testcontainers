@@ -2,7 +2,7 @@ package com.testing.springtestcontainers.controllers;
 
 import com.testing.springtestcontainers.entities.Category;
 import com.testing.springtestcontainers.services.CategoryService;
-import lombok.RequiredArgsConstructor;
+import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,9 +10,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/categories")
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class CategoryController {
-    private CategoryService categoryService;
+    private final CategoryService categoryService;
 
     @PostMapping
     public ResponseEntity<Category> addCategory(@RequestBody Category category) {

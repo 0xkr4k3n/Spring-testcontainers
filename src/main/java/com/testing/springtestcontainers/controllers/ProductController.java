@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping("/products")
 @RequiredArgsConstructor
 public class ProductController {
-    private ProductService productService;
+    private final ProductService productService;
 
     @PostMapping
     public ResponseEntity<Product> createProduct(@RequestBody Product product) {

@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class SupplierService {
-    private SupplierRepository supplierRepository;
+    private final SupplierRepository supplierRepository;
     public Supplier saveSupplier(Supplier supplier) {
         return supplierRepository.save(supplier);
     }

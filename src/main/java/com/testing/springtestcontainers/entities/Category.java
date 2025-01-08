@@ -20,4 +20,8 @@ public class Category {
     @OneToMany(mappedBy = "category")
     private Set<Product> products;
 
+    public Category(String name, String variousBooks) {
+        this.name=name;
+        this.description=variousBooks;
+    }
 }
